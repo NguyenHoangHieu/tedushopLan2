@@ -15,6 +15,7 @@ namespace TeduShop.Model.Models
         [Required]
         [MaxLength(256)]
         public string Name { get; set; }
+
         public string Alias { get; set; }
         public int CategoryID { get; set; }
 

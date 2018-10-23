@@ -57,6 +57,11 @@
     <Compile Include="Intrastructure\IUnitOfWork.cs" />
     <Compile Include="Intrastructure\RepositoryBase.cs" />
     <Compile Include="Intrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201810231625356_InitialDB.cs" />
+    <Compile Include="Migrations\201810231625356_InitialDB.Designer.cs">
+      <DependentUpon>201810231625356_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeduShopDbContext.cs" />
   </ItemGroup>
@@ -73,6 +78,11 @@
       <Project>{AFC78A9D-F8C1-4310-B945-F733A7922D60}</Project>
       <Name>TeduShop.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810231625356_InitialDB.resx">
+      <DependentUpon>201810231625356_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
