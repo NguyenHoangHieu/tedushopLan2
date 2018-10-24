@@ -31,7 +31,7 @@ namespace TeduShop.Model.Models
         public bool? HotFlag { get; set; }
         public int? ViewCount { get; set; }
 
-        //public virtual IEnumerable<PostTag> PostTags { get; set; }
+        public virtual IEnumerable<PostTag> PostTags { get; set; }
         public virtual PostCategory PostCategory { get; set; }
     }
 }
