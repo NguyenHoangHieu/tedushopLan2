@@ -15,7 +15,7 @@ namespace TeduShop.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application description page. 111111111111111111111111111 VUA THEM 222222222222";
 
             return View();
         }
