@@ -15,7 +15,9 @@ namespace TeduShop.Service
 
         IEnumerable<Post> GetAll();
 
-        IEnumerable<Post> GetAllPaging(string tag, int page, int pageSize, out int totalRow);
+        IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow);
+
+        IEnumerable<Post> GetAllByPaging(string tag, int page, int pageSize, out int totalRow);
 
         Post GetById(int id);
 
@@ -28,7 +30,6 @@ namespace TeduShop.Service
     {
         //Khoi tao
         private IPostRepository _postRepository;
-
         private IUnitOfWork _unitOfWork;
 
         public PostService(IPostRepository postRepository, IUnitOfWork unitOfWork)
@@ -54,11 +55,15 @@ namespace TeduShop.Service
             return _postRepository.GetAll(new string[] { "PostCategory" });
         }
 
-        public IEnumerable<Post> GetAllPaging(string tag, int page, int pageSize, out int totalRow)
+        //them moi
+        public IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow)
         {
-            //TODO: SELECT BY TAG
-            return _postRepository.GetMultiPaging(x => x.Status, out totalRow, page, pageSize);
-            //return _postRepository.GetMultiPaging(x => x.Status && x.PostTags.Contains(tag), out totalRow, page, pageSize);
+            return _postRepository.GetMultiPaging(x => x.Status && x.CategoryID == categoryId, out totalRow, page, pageSize, new string[] { "PostCategory" });
+        }
+
+        public IEnumerable<Post> GetAllByPaging(string tag, int page, int pageSize, out int totalRow)
+        {
+            return _postRepository.GetAllByTag(tag, page, pageSize, out totalRow);
         }
 
         public IEnumerable<Post> GetAllTagPaging(int page, int pageSize, out int totalRow)
