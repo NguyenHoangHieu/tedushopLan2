@@ -10,6 +10,7 @@ namespace TeduShop.Model.Models
         [Key]
         public int ID { set; get; }
 
+
         public string Message { set; get; }
 
         public string StackTrace { set; get; }
