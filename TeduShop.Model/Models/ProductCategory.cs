@@ -32,5 +32,6 @@ namespace TeduShop.Model.Models
         public bool? HomeFlag { get; set; }
 
         public virtual IEnumerable<Product> Products { get; set; }
+
     }
 }
