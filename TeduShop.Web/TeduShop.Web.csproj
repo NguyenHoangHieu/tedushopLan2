@@ -225,6 +225,10 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\home\homeView.html" />
     <Content Include="app\components\home\homeController.js" />
+    <Content Include="app\components\product_categories\productCategoryAddController.js" />
+    <Content Include="app\components\product_categories\productCategoryEditView.html" />
+    <Content Include="app\components\product_categories\productCategoryAddView.html" />
+    <Content Include="app\components\product_categories\productCategoryEditController.js" />
     <Content Include="app\components\product_categories\productCategoryListController.js" />
     <Content Include="app\components\product_categories\productCategoryListView.html" />
     <Content Include="app\components\products\products.module.js" />
@@ -240,6 +244,7 @@
     <Content Include="app\shared\filters\statusFilter.js" />
     <Content Include="app\shared\modules\tedushop.common.js" />
     <Content Include="app\shared\services\apiService.js" />
+    <Content Include="app\shared\services\commonService.js" />
     <Content Include="app\shared\services\nofiticationService.js" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
@@ -664,7 +669,6 @@
     <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Views\index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
