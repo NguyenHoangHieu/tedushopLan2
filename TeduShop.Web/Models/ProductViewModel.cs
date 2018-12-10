@@ -45,11 +45,11 @@ namespace TeduShop.Web.Models
 
         public string MetaKeyword { set; get; }
 
-       // public string MetaDescription { set; get; }
+        public string MetaDescript { set; get; }
 
         public bool Status { set; get; }
 
-        //public int Tags { get; set; }
+        public string Tags { get; set; }
 
         public virtual ProductCategoryViewModel ProductCategory { set; get; }
     }

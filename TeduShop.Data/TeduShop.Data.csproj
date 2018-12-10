@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201811031310518_changkey.Designer.cs">
       <DependentUpon>201811031310518_changkey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101432224_addTags.cs" />
+    <Compile Include="Migrations\201812101432224_addTags.Designer.cs">
+      <DependentUpon>201812101432224_addTags.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ContactDetailRepository.cs" />
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811031310518_changkey.resx">
       <DependentUpon>201811031310518_changkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101432224_addTags.resx">
+      <DependentUpon>201812101432224_addTags.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
